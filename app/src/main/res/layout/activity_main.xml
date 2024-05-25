@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#f0f0f0"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/initialBalanceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Initial Balance:"
+        android:textSize="18sp"
+        android:textColor="#333"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/initialBalanceEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Initial Balance"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/initialBalanceLabel"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:padding="10dp"
+        android:background="@drawable/edit_text_background"/>
+
+    <Button
+        android:id="@+id/createAccountButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Account"
+        android:layout_below="@id/initialBalanceEditText"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:backgroundTint="#4CAF50"
+        android:textColor="#fff"
+        android:padding="12dp"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/transactionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Amount:"
+        android:textSize="18sp"
+        android:textColor="#333"
+        android:layout_below="@id/createAccountButton"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/transactionAmountEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Amount"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/transactionLabel"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:padding="10dp"
+        android:background="@drawable/edit_text_background"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/transactionAmountEditText"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp">
+
+        <Button
+            android:id="@+id/depositButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Deposit"
+            android:backgroundTint="#FF9800"
+            android:textColor="#fff"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:layout_marginEnd="5dp"/>
+
+        <Button
+            android:id="@+id/withdrawButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Withdraw"
+            android:backgroundTint="#F44336"
+            android:textColor="#fff"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:layout_marginStart="5dp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/checkBalanceButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Check Balance"
+        android:layout_below="@id/depositButton"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:backgroundTint="#2196F3"
+        android:textColor="#fff"
+        android:padding="12dp"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/balanceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Balance: $0.00"
+        android:textSize="18sp"
+        android:textColor="#333"
+        android:layout_below="@id/checkBalanceButton"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>
